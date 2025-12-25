@@ -66,7 +66,7 @@ function Pages() {
 
                                 <div className=" relative">
                                     <img src={productItem.images[0]}
-                                        className="  w-full h-70 object-contain rounded-t-3xl bg-gray-200  " />
+                                        className="  w-full h-70 object-contain rounded-t-3xl bg-gradient-to-b bg-gradient-to-b from-neutral-100 to-neutral-200   rounded-b-3xl " />
                                     <p className={`absolute bottom-0 left-1/2 -translate-x-1/2 px-4 py-1  text-sm font-semibold bg-white/90 rounded-t-md  backdrop-blur  
                                        ${productItem.availabilityStatus === "In Stock"
                                             ? " text-green-700 "
