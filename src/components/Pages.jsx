@@ -5,6 +5,9 @@ import { HiCurrencyDollar } from "react-icons/hi";
 import { PiCurrencyDollarSimpleFill } from "react-icons/pi";
 import SearchBox from "./SearchBox";
 function Pages() {
+    const API_URL = import.meta.env.VITE_PRODUCT_API;
+    console.log("API_URL",API_URL);
+    
 
     const [loading,setLoading] = useState(false)
     const [productsData, setProductsData] = useState([])
@@ -17,7 +20,7 @@ function Pages() {
     async function fetchData() {
         try {
             setLoading(true);
-            const response = await fetch(`https://dummyjson.com/products?limit=200&skip=0`)
+           const response = await fetch(`${API_URL}?limit=120&skip=0`);
             const jsonData = await response.json();
                 
             setProductsData(jsonData.products)
@@ -103,6 +106,7 @@ function Pages() {
                 {
                     [...Array(totalPages)].map((_,index)=>(
                         <Button
+                        key={index}
                         onClick={( )=> setCurrentPage(index +1)}
                        className={`px-4 py-4 text-md rounded-lg border font-semibold text-black
                         ${currentPage === index + 1
