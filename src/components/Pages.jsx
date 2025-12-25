@@ -62,7 +62,7 @@ function Pages() {
                 {
                     currentProducts && currentProducts.length ?
                         currentProducts.map((productItem) =>
-                            <div key={productItem.id} className=" w-80 h-107 rounded-3xl shadow-xl bg-white">
+                            <div key={productItem.id} className=" w-80 h-107 rounded-3xl shadow-lg bg-white">
 
                                 <div className=" relative">
                                     <img src={productItem.images[0]}
