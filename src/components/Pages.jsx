@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import { MdStars } from "react-icons/md";
 import { Button } from "./ui/button";
 import { HiCurrencyDollar } from "react-icons/hi";
-import { PiCurrencyDollarSimpleFill } from "react-icons/pi";
 import SearchBox from "./SearchBox";
 function Pages() {
     const API_URL = import.meta.env.VITE_PRODUCT_API;
