@@ -38,6 +38,7 @@ function Pages() {
 
     function handleFilterprouct(data){ 
         setFilterProCard(data)
+        setCurrentPage(1);
     }
 
    if (loading) {
