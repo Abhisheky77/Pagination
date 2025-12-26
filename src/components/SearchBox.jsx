@@ -21,12 +21,48 @@ function SearchBox({products,onSearch}){
     }
     
     return (
-        <div className=" flex justify-center gap-3 mt-10 sticky top-10 z-10">
-            <input type="text" placeholder="Search products..." value={searchText} onChange={(e)=>setSearchText(e.target.value)}
-            className=" w-70 h-10  rounded-md p-4 focus:outline-none focus:ring-2 focus:ring-gray-600 bg-white border-2 border-gray-300"/>
-             <Button onClick={handleSearch} className=" w-30 h-10 bg-gray-600 hover:bg-gray-700 text-white">Search</Button>
-             <Button onClick={handleRefresh} className=" w-30 h-10 bg-red-500 hover:bg-red-600">Refresh</Button>
-        </div>
+       <div className="sticky top-0 z-20 flex justify-center">
+  <div className="bg-white w-full max-w-xl p-4 rounded-2xl shadow-xl">
+    
+    <div className="flex flex-col sm:flex-row gap-3 items-center">
+
+      {/* Search Input */}
+      <input
+        type="text"
+        placeholder="Search products..."
+        value={searchText}
+        onChange={(e) => setSearchText(e.target.value)}
+        className="w-full h-11 px-4 rounded-lg
+                   border border-gray-300
+                   focus:outline-none focus:ring-2 focus:ring-gray-600"
+      />
+
+      {/* Buttons */}
+      <div className="flex gap-3 w-full sm:w-auto">
+        <button
+          onClick={handleSearch}
+          className="w-full sm:w-28 h-11 rounded-lg
+                     bg-slate-700 hover:bg-slate-800
+                     text-white font-medium shadow-md"
+        >
+          Search
+        </button>
+
+        <button
+          onClick={handleRefresh}
+          className="w-full sm:w-28 h-11 rounded-lg
+                     bg-red-500 hover:bg-red-600
+                     text-white font-medium shadow-md"
+        >
+          Refresh
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
     )
 }
 export default SearchBox
