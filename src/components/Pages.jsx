@@ -95,35 +95,64 @@ function Pages() {
                         : <div className=" text-3xl font-semibold text-red-500 ">Product are not founds</div>
                 }
             </div>
-            <div className=" flex justify-center items-center mb-10 gap-2">
-                <Button
-                disabled={currentPage === 1}
-                onClick={()=>setCurrentPage (currentPage -1)}
-                className=" bg-gray-300 text-black hover:bg-gray-400 disabled:opacity-50 text-md"
+            <div className="
+  flex flex-wrap justify-center items-center
+  gap-2 sm:gap-3
+  mb-10 px-2
+">
+  {/* Prev Button */}
+  <Button
+    disabled={currentPage === 1}
+    onClick={() => setCurrentPage(currentPage - 1)}
+    className="
+      bg-gray-300 text-black
+      hover:bg-gray-400
+      disabled:opacity-50
+      text-sm sm:text-md
+      px-3 sm:px-4
+    "
+  >
+    Prev
+  </Button>
 
-                >Prev</Button>
+  {/* Page Numbers */}
+  <div className="flex flex-wrap justify-center gap-1 sm:gap-2">
+    {[...Array(totalPages)].map((_, index) => (
+      <Button
+        key={index}
+        onClick={() => setCurrentPage(index + 1)}
+        className={`
+          px-3 py-2 sm:px-4 sm:py-2
+          text-sm sm:text-md
+          rounded-lg border font-semibold
+          ${
+            currentPage === index + 1
+              ? "bg-gray-700 text-white"
+              : "bg-white text-black hover:bg-gray-200"
+          }
+        `}
+      >
+        {index + 1}
+      </Button>
+    ))}
+  </div>
 
-                {
-                    [...Array(totalPages)].map((_,index)=>(
-                        <Button
-                        key={index}
-                        onClick={( )=> setCurrentPage(index +1)}
-                       className={`px-4 py-4 text-md rounded-lg border font-semibold text-black
-                        ${currentPage === index + 1
-                            ? "bg-gray-700 text-white"
-                            : "bg-white hover:bg-gray-200"
-                        }`}
+  {/* Next Button */}
+  <Button
+    disabled={currentPage === totalPages}
+    onClick={() => setCurrentPage(currentPage + 1)}
+    className="
+      bg-gray-300 text-black
+      hover:bg-gray-400
+      disabled:opacity-50
+      text-sm sm:text-md
+      px-3 sm:px-4
+    "
+  >
+    Next
+  </Button>
+</div>
 
-                        >{index+1}</Button>
-                    ))
-                }
-                <Button
-                disabled={currentPage == totalPages}
-                onClick={()=>setCurrentPage(currentPage + 1 )}
-                className="bg-gray-300 text-black text-md hover:bg-gray-400 disabled:opacity-50"
-
-                >Next</Button>
-            </div>
            
         </div>
         

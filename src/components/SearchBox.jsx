@@ -8,10 +8,10 @@ function SearchBox({ products, onSearch }) {
 
     function searchProducts() {
         const filterProducts = products.filter((item) =>
-            item.title?.toLowerCase().includes(searchText.toLowerCase()) ||
-            item.category?.toLowerCase().includes(searchText.toLowerCase()) ||
-            item.brand?.toLowerCase().includes(searchText.toLowerCase()) ||
-            item.tags?.some((tag) => tag.toLowerCase().includes(searchText.toLowerCase())));
+            item.title?.toLowerCase().includes(searchText.trim().toLowerCase()) ||
+            item.category?.toLowerCase().includes(searchText.trim().toLowerCase()) ||
+            item.brand?.toLowerCase().includes(searchText.trim().toLowerCase()) ||
+            item.tags?.some((tag) => tag.toLowerCase().includes(searchText.trim().toLowerCase())));
         onSearch(filterProducts)
     }
 
