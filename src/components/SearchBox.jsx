@@ -68,14 +68,14 @@ function SearchBox({ products, onSearch }) {
 
                 <Scrollindicator onScroll={getScrollPersentage} />
                 <div className="w-full h-1 bg-gray-200 rounded-full overflow-hidden">
-  <div
-    className="h-full rounded-full transition-all duration-150 ease-out"
-    style={{
-      width: `${scrollValue}%`,
-      background: "linear-gradient(90deg, #334155, #38bdf8)"
-    }}
-  />
-</div>
+                    <div
+                        className="h-full rounded-full transition-all duration-150 ease-out"
+                        style={{
+                            width: `${scrollValue}%`,
+                            background: "linear-gradient(90deg, #334155, #38bdf8)"
+                        }}
+                    />
+                </div>
 
 
 
