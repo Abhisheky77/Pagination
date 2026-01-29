@@ -13,7 +13,7 @@ function Pages() {
     const [count, setCount] = useState(0)
     const [currentPage, setCurrentPage] = useState(1)
     const pageSize = 20;
-    //console.log("filterProCard", filterProCard);
+    console.log("filterProCard", filterProCard);
 
     async function fetchData() {
         try {
