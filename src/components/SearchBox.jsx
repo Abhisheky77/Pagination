@@ -4,6 +4,8 @@ import Scrollindicator from "./Scroll_Indicator";
 function SearchBox({ products, onSearch }) {
     const [searchText, setSearchText] = useState("");
     const [scrollValue, setScrollValue] = useState(0);
+console.log(searchProducts);
+
 
     function searchProducts() {
         const filterProducts = products.filter((item) =>
