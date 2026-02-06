@@ -6,7 +6,6 @@ import SearchBox from "./SearchBox";
 function Pages() {
     const API_URL = import.meta.env.VITE_PRODUCT_API;
 
-
     const [loading, setLoading] = useState(false)
     const [productsData, setProductsData] = useState([])
     const [filterProCard, setFilterProCard] = useState([])
