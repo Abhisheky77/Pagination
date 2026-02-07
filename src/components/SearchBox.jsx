@@ -6,9 +6,6 @@ function SearchBox({ products, onSearch }) {
     const [scrollValue, setScrollValue] = useState(0);
 
 
-console.log(searchText);
-
-
     function searchProducts() {
         const filterProducts = products.filter((item) =>
             item.title?.toLowerCase().includes(searchText.trim().toLowerCase()) ||
