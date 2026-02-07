@@ -26,6 +26,5 @@ console.log(scrollpercentage);
     },[])
 
     return null;
-    
 }
 export default Scrollindicator;
