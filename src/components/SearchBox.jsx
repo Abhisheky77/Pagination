@@ -6,6 +6,7 @@ function SearchBox({ products, onSearch }) {
     const [scrollValue, setScrollValue] = useState(0);
 
 
+console.log(searchText);
 
 
     function searchProducts() {
